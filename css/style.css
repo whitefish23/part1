@@ -87,7 +87,7 @@
   position: relative;
   flex-shrink: 0;
   margin-right: 30px;
-
+  transition: 0.8s;
 }
 
 .container-img-ava:after {
@@ -109,18 +109,21 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 27px;
+  transition: 0.8s;
 }
 
 /*----------------------------------------------------*/
 
 .text-line {
   background-color: #f5f7fa;
-  width: 725px;
+  width: 100%;
   height: 55px;
   margin-right: 12px;
   border-radius: 3px;
   padding-left: 20px;
   font-size: 14px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .text-line:hover {
@@ -130,7 +133,6 @@
 
 .note-wrap {
   display: flex;
-  flex-wrap: nowrap;
   padding-bottom: 40px;
 }
 
@@ -138,12 +140,14 @@
   background-color: #1a7bff;
   border-radius: 3px;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 0px 30px;
+  height: 55px;
+  width: 150px;
   font-family: Montserrat;
   cursor: pointer;
   letter-spacing: 0.6px;
+  transition: 0.1s;
 }
 
 .button-one:hover {
@@ -160,6 +164,7 @@
 
 .column {
   width: calc(100%/3);
+  transition: 0.2s;
 }
 
 .note-gray {
@@ -193,24 +198,22 @@
 
 /*-----------------------------------------*/
 
-
 .edit-two {
-  display: flex;
   position: relative;
-  padding-bottom: 30px;
-  
+  margin-top: 29px;
+  line-height: 1.2;
+  padding-left: 35px;
 }
 
-.edit-img {
-  width: 20px;
-  height: 16px;
-}
-
-.edit-text {
+.edit-two::before {
+  content: '';
+  background: url(/svg/icon1.svg) no-repeat center;
+  width: 23px;
+  height: 18px;
+  margin-right: 18px;
   position: absolute;
-  top: -5px;
-  left: 37px;
-  line-height: 27px;
+  left: 0;
+  top: 0;
 }
 
 /*--------------------------------------------*/
@@ -225,6 +228,7 @@
   width: calc(100% /3);
   padding-right: 20px;
   padding-bottom: 20px;
+  transition: 0.1s;
 
 }
 
@@ -234,9 +238,46 @@
   }
 }
 
+@media (max-width:640px) {
+  .card-part {
+    width: 100%;
+  }
+
+ .note-wrap {
+  display: block;
+ }
+
+ .button-one {
+  width: 100%;
+ }
+
+.content {
+  display: block;
+}
+
+.container-img-ava {
+ margin: 0 auto;
+}
+
+.container-desk {
+margin-top: 30px;
+}
+
+.note-zone {
+display: block;
+}
+
+.column {
+  width: 100%;
+}
+
+}
+
+
 .square-card {
   position: relative;
   height: 200px;
+  width: 100%;
 }
 
 .img-bg {
@@ -288,7 +329,6 @@
   line-height: 22px;
   overflow: hidden;
   margin-bottom: 25px;
-  max-width: 228px;
 }
 
 .one-bott {

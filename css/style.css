@@ -1,4 +1,4 @@
-.wrapper {
+.borders {
   font-family: 'Montserrat';
   background-color: #f5f7fa;
   padding-bottom: 50px;
@@ -10,7 +10,7 @@
   margin: 0px auto;
 }
 
-.my-name-title {
+.user-name {
   font-weight: 700;
   font-size: 32px;
   padding: 124px 0px 55px 0px;
@@ -80,7 +80,7 @@
   display: flex;
 }
 
-.container-img-ava {
+.container-img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -88,10 +88,9 @@
   position: relative;
   flex-shrink: 0;
   margin-right: 30px;
-  transition: 0.8s;
 }
 
-.container-img-ava:after {
+.container-img:after {
   content: "";
   position: absolute;
   left: 0;
@@ -102,20 +101,24 @@
   object-position: 0 10px;
 }
 
-.ava-nigga {
+.img-avatar {
   object-position: 0 -12px;
 }
 
-.container-desk {
+.container-description {
   font-weight: 400;
   font-size: 16px;
   line-height: 27px;
-  transition: 0.8s;
 }
 
 /*----------------------------------------------------*/
 
-.text-line {
+.input {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.input-line {
   background-color: #f5f7fa;
   width: 100%;
   height: 55px;
@@ -127,17 +130,25 @@
   margin-bottom: 10px;
 }
 
-.text-line:hover {
+.input-line:hover {
   background-color: #fcfcfc;
   transition: 0.2s;
 }
 
-.note-wrap {
-  display: flex;
-  padding-bottom: 40px;
+.note {
+  background-color: #f5f7fa;
+  margin: 0 -40px -40px;
+  height: auto;
+  overflow: hidden;
 }
 
-.button-one {
+.note-zone {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px 20px 30px;
+}
+
+.button-add {
   background-color: #1a7bff;
   border-radius: 3px;
   color: #ffffff;
@@ -148,31 +159,16 @@
   font-family: Montserrat;
   cursor: pointer;
   letter-spacing: 0.6px;
-  transition: 0.1s;
+
 }
 
-.button-one:hover {
+.button-add:hover {
   background-color: #156eeb;
   transition: 0.2s;
 }
 
-.note-zone {
-  display: flex;
-  padding: 40px 20px 20px 30px;
-  height: 650px;
-
-}
-
 .column {
   width: calc(100%/3);
-  transition: 0.2s;
-}
-
-.note-gray {
-  background-color: #f5f7fa;
-  margin: 0 -40px -40px;
-  height: 375px;
-  overflow: auto;
 }
 
 .column-text {
@@ -182,14 +178,15 @@
   font-weight: 400;
   margin: 0 10px 20px;
   padding: 20px 23px;
+  word-wrap: break-word;
 }
 
-.two-element {
+.column-card {
   position: relative;
 
 }
 
-.cross {
+.column-cross {
   position: absolute;
   right: 22px;
   top: 5px;
@@ -197,18 +194,22 @@
   height: 8px;
 }
 
+.column-cross:hover {
+  opacity: 50%;
+}
+
 /*-----------------------------------------*/
 
-.edit-two {
+.edit {
   position: relative;
   margin-top: 29px;
   line-height: 1.2;
   padding-left: 35px;
 }
 
-.edit-two::before {
+.edit::before {
   content: '';
-  background: url(/svg/icon1.svg) no-repeat center;
+  background: url(../svg/icon1.svg) no-repeat center;
   width: 23px;
   height: 18px;
   margin-right: 18px;
@@ -229,8 +230,6 @@
   width: calc(100% /3);
   padding-right: 20px;
   padding-bottom: 20px;
-  transition: 0.1s;
-
 }
 
 @media (max-width:900px) {
@@ -244,33 +243,33 @@
     width: 100%;
   }
 
- .note-wrap {
-  display: block;
- }
+  .input {
+    display: block;
+  }
 
- .button-one {
-  width: 100%;
- }
+  .button-add {
+    width: 100%;
+  }
 
-.content {
-  display: block;
-}
+  .content {
+    display: block;
+  }
 
-.container-img-ava {
- margin: 0 auto;
-}
+  .container-img {
+    margin: 0 auto;
+  }
 
-.container-desk {
-margin-top: 30px;
-}
+  .container-description {
+    margin-top: 30px;
+  }
 
-.note-zone {
-display: block;
-}
+  .note-zone {
+    display: block;
+  }
 
-.column {
-  width: 100%;
-}
+  .column {
+    width: 100%;
+  }
 
 }
 
@@ -307,7 +306,7 @@ display: block;
   z-index: 2;
 }
 
-.fon {
+.square-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -315,7 +314,7 @@ display: block;
   box-shadow: 0 10px 20px 15px rgba(163, 163, 163, 0.05);
 }
 
-.one-title {
+.news-title {
   font-size: 10px;
   margin-bottom: 30px;
   color: #b7bac0;
@@ -332,7 +331,7 @@ display: block;
   margin-bottom: 25px;
 }
 
-.one-bott {
+.button-detailed {
   background-color: #1a7bff;
   border-radius: 3px;
   color: #ffffff;
@@ -343,7 +342,7 @@ display: block;
   cursor: pointer;
 }
 
-.one-bott:hover {
+.button-detailed:hover {
   background-color: #0d71fd;
   transform: scale(0.98);
   transition: 0.1s;

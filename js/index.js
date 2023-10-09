@@ -1,5 +1,5 @@
 const addNoteButton = document.querySelector(".button-add");
-const noteText = document.querySelector(".input-line");
+const inputText = document.querySelector(".input-line");
 const noteZone = document.getElementById("noteZone");
 const noteBlock = document.querySelector(".note");
 
@@ -9,7 +9,7 @@ if (noteZone.childElementCount === 0) {
 
 addNoteButton.addEventListener("click", function () {
 
-  const text = noteText.value;
+  const text = inputText.value;
 
   if (text.trim() !== "") {
     const columnCard = document.createElement("div");
@@ -37,7 +37,6 @@ addNoteButton.addEventListener("click", function () {
 
     const crossIcon = document.createElement("img");
     crossIcon.src = "/svg/cross-icon.svg";
-    crossIcon.alt = "Удалить";
 
     columnCross.appendChild(crossIcon);
     columnCard.appendChild(columnText);
@@ -47,7 +46,7 @@ addNoteButton.addEventListener("click", function () {
 
     noteBlock.style.display = "block";
 
-    noteText.value = "";
+    inputText.value = "";
   }
 });
 

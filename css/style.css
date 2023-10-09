@@ -18,7 +18,7 @@
   letter-spacing: 0.6px;
 }
 
-.card {
+.section {
   padding: 40px 40px;
   background-color: white;
   margin-bottom: 50px;
@@ -27,7 +27,7 @@
 
 }
 
-.card-title {
+.section-title {
   font-weight: 700;
   font-size: 22px;
   padding-bottom: 30px;
